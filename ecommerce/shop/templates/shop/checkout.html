@@ -1,0 +1,119 @@
+{% extends 'shop/basic.html' %}
+
+{% block title %} Checkout-Product {% endblock %}
+
+{% block css %}
+<style>
+    .container{
+        width: 800px;
+        padding: 50px;
+    }
+
+    .second-content,.second-content{
+        margin-top: 60px;
+    }
+</style>
+
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <div class="checkout-content">
+        <div class="first-content">
+            <h1>Step-1:Product Details</h1>
+
+            <ol class="list-group list-group-numbered">
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">RedMi Smart Tv</div>
+                    Here are some custom show product description examples for you to copy, steal and use in your shop.
+                    <p>Rs.30000</p>
+                  </div>
+                  <span class="badge bg-primary rounded-pill">1</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">Reebook</div>
+                    Here are some custom show product description examples for you to copy, steal and use in your shop.
+                    <p>Rs.3000</p>
+                  </div>
+                  <span class="badge bg-primary rounded-pill">2</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                  <div class="ms-2 me-auto">
+                    <div class="fw-bold">puma</div>
+                    Here are some custom show product description examples for you to copy, steal and use in your shop.
+                    <p>Rs.4000</p>
+                  </div>
+                  <span class="badge bg-primary rounded-pill">1</span>
+                </li>
+              </ol>
+
+        </div>
+       
+
+        <div class="second-content">
+            <h1>Step-2:Please Enter the Following Details</h1>
+
+            <form class="row g-3" method="post" action="/checkout/">{%csrf_token%}
+                <input type="hidden" id="orderprod" class="orderprod">
+                <div class="col-md-6">
+                    <label for="inputName" class="form-label">Name</label>
+                    <input type="text" name="name" class="form-control" id="inputName" required>
+                  </div>
+                <div class="col-md-6">
+                  <label for="inputEmail4" class="form-label">Email</label>
+                  <input type="email" name="email" class="form-control" id="inputEmail4" required>
+                </div>
+                
+                <div class="col-12">
+                  <label for="inputAddress" class="form-label">Address</label>
+                  <input type="text" class="form-control" name="address" id="inputAddress" placeholder="1234 Main St" required>
+                </div>
+                <div class="col-12">
+                  <label for="inputAddress2" class="form-label">Address 2</label>
+                  <input type="text"  class="form-control" name="address2" id="inputAddress2" placeholder="Apartment, studio, or floor" required>
+                </div>
+                <div class="col-12">
+                    <label for="inputphone2" class="form-label">PhoneNo</label>
+                    <input type="number" class="form-control" name="phone" id="inputPhone" required>
+                  </div>
+                <div class="col-md-6">
+                  <label for="inputCity" class="form-label">City</label>
+                  <input type="text" class="form-control" name="city" id="inputCity" required>
+                </div>
+                <div class="col-md-4">
+                  <label for="inputState" class="form-label">State</label>
+                  <input type="text" class="form-control" name="state" id="inputState" required>
+                </div>
+                <div class="col-md-2">
+                  <label for="inputZip" class="form-label">Zip</label>
+                  <input type="text" class="form-control" name="zip" id="inputZip" required>
+                </div>
+                <div class="col-12">
+    
+                <div class="col-12">
+                  <button type="submit" onClick='orplaced()'  class="btn btn-primary">Place Order</button>
+                </div>
+              </form>
+
+        </div>
+    </div>
+</div>
+
+{% block jss %}
+<script>
+    if(input==""){
+      
+    }
+    else{
+    const orplaced = () => {
+        alert('Placed Ordered Successfully...')
+    }
+  }
+</script>
+
+{% endblock %}
+
+{% endblock %}

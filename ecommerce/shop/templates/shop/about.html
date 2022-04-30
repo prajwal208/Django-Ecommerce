@@ -1,0 +1,57 @@
+{% extends 'shop/basic.html' %}
+
+{% block title %} Ecommerce {% endblock %}
+
+{% block css%}
+<style>
+
+#para{
+text-align: center;
+width: 800px;
+}
+
+#container{
+    width: 1000px;
+}
+
+</style>
+{% endblock%}
+
+
+{% block body %} 
+
+<div class="px-5 py-5 my-5 text-center" >
+    <h1 class="display-5 fw-bold">About Us</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-6" id="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur totam eaque ut repudiandae provident distinctio dolor debitis, impedit ea, perferendis enim nesciunt molestias eum aliquam aspernatur sequi ad iste perspiciatis.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit animi debitis aut dicta impedit rem et, cumque atque, id perspiciatis vitae laborum sunt nemo vel tempora blanditiis culpa. Itaque, hic!
+      </p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <a href="/contact">
+        <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Contach Us</button>
+    </a>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="/media/shop/images/ecommerce.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="700" >
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold lh-1 mb-3">Django Ecommerce Website</h1>
+        <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias culpa, dolorem quaerat voluptatibus quia sit perferendis ea! Tempore esse odio dolorem commodi sapiente qui ab non, obcaecati eligendi aliquid deserunt.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, vero? Necessitatibus reiciendis quia tempore, doloremque magni qui eveniet fugit inventore quibusdam maxime at corporis placeat enim hic non adipisci unde.
+        </p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">View More</button>
+          <button type="button" class="btn btn-outline-secondary btn-lg px-4">Default</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

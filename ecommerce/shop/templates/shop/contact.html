@@ -1,0 +1,47 @@
+{% extends 'shop/basic.html' %}
+
+{% block title %} Contact US {% endblock %}
+
+{% block css%}
+
+<style>
+.container{
+  width: 700px;
+  margin-top: 100px;
+}
+
+h1{
+  margin-bottom: 50px;
+  color: darkblue;
+}
+
+</style>
+
+{% endblock %}
+
+{% block body %} 
+
+<div class="container">
+  <h1>Contact Us</h1>
+<form action="/contact/" method="post"> {% csrf_token %}
+    <div class="mb-3">
+       <b> <label for="exampleInputEmail1" class="form-label">Name</label></b>
+        <input type="text" class="form-control" name='name' id="exampleInputname1" aria-describedby="emailHelp" required>
+       
+      </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPhone1" class="form-label">Phone</label>
+      <input type="number" class="form-control" name="phoneno" id="exampleInputPhone1" required>
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">How may I help you?</label>
+        <textarea class="form-control" name="desc" id="exampleFormControlTextarea1" rows="3" required></textarea>
+      </div>
+   <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+{% endblock %}

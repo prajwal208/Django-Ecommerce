@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Product-container{
+    margin-top: 80px;
+    margin-left: 70px;
+    width: 1400px;
+    overflow-x: auto;
+}
+
+
+.item-cards{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid lightgray;
+    padding: 10px;
+}
+
+
+
+.card{
+    margin-left: 10px;
+}
+
+.card-text{
+    width: 250px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
